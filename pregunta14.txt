@@ -1,0 +1,20 @@
+﻿Clasifiquemos OpenMP, MPI y Multiprocessing según la taxonomía de Flynn:
+
+OpenMP:
+Clasificación: SIMD
+Justificación: OpenMP se utiliza para la programación de memoria compartida (SMP), donde múltiples hilos (instrucciones) 
+ejecutan el mismo código (instrucción) en diferentes partes de los datos (datos). Por lo tanto, es un ejemplo de SIMD, 
+ya que una única instrucción (código) se aplica a múltiples datos (hilos) de manera simultánea.
+
+MPI:
+Clasificación: MIMD
+Justificación: MPI se utiliza para la programación de paso de mensajes, 
+donde múltiples procesos ejecutan diferentes códigos en diferentes conjuntos de datos. Cada proceso puede ejecutar una
+secuencia de instrucciones independiente y operar en su propio conjunto de datos. Por lo tanto, MPI se clasifica como MIMD,
+ya que múltiples flujos de instrucciones operan en múltiples flujos de datos de manera simultánea.
+
+Multiprocessing (Python):
+Clasificación: MIMD
+Justificación: Multiprocessing en Python proporciona una forma de crear múltiples procesos independientes que pueden ejecutar
+diferentes secciones de código en paralelo. Cada proceso puede tener su propio flujo de instrucciones y operar en su propio
+conjunto de datos. Por lo tanto, también se clasifica como MIMD, similar a MPI.
